@@ -29,12 +29,20 @@ class ExceptionsTest {
 	//   two doubles as parameters and returns their quotient as a double. This method 
 	//   should throw an IllegalArgumentException if the denominator is 0.0.
 	
+	
+	
+	
+	
 	//3. Complete the JUnit test method to test the divide method.
 	@Test
 	public void testDivideByZeroException() {
-		
+		try {
+		em.divide(1.0,0.0);
+		fail("IllegalArgumentException");
+	}catch(IllegalArgumentException x) {
+		x.printStackTrace();
 	}
-	
+	}
 	//4. In the ExceptionMethods class, write a method called reverseString that takes a
 	//   String and returns the reverse of that String. It should throw an IllegalStateException
 	//   if the String passed in is empty
